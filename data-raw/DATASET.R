@@ -1,6 +1,6 @@
 library(tidyverse)
 DiscGolf <-
-  readr::read_csv("pdga-approved-disc-golf-discs_2020-10-04T15-02-04.csv") %>%
+  readr::read_csv("./data-raw/pdga-approved-disc-golf-discs_2020-10-04T15-02-04.csv") %>%
   janitor::clean_names() %>%
   mutate(
     model = iconv(disc_model, "latin1", "ASCII", sub = ""),
